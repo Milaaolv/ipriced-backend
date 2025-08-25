@@ -1,3 +1,14 @@
+const cors = require('cors');
+
+// Substitua a URL abaixo pela URL exata do seu frontend no Vercel
+const frontendURL = 'https://i-priced-frontend.vercel.app/'; 
+
+// Use o middleware CORS, permitindo a comunicação com o seu frontend
+app.use(cors({
+    origin: frontendURL,
+    credentials: true,
+}));
+
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
