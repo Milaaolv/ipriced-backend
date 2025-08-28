@@ -4,8 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-// Substitua a URL abaixo pela URL exata do seu frontend no Vercel
-const frontendURL = 'https://i-priced-frontend.vercel.app/'; 
+const frontendURL = process.env.FRONTEND_URL;
 
 // Use o middleware CORS, permitindo a comunicação com o seu frontend
 app.use(cors({
